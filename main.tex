@@ -3,13 +3,29 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{authblk}
 \usepackage{xr}
 \externaldocument{supplement.tex}
 
 \usepackage[backend=biber]{biblatex}
 \addbibresource{literature.bib}
 
+\newcommand{\sharedfirst}{$\dagger$}
+\newcommand{\sharedfirsttext}[1]{\affil[\sharedfirst]{#1}}
+\newcommand{\corresponding}{*}
+\newcommand{\correspondingtext}[1]{\affil[\corresponding]{#1}}
+
 \begin{document}
+
+\author[1,2,\sharedfirst]{Beverly Crusher}
+\author[1,\sharedfirst]{Geordi LaForge}
+\author[3]{Cathryn Janeway}
+\author[1,\corresponding]{Jean Luc Picard}
+\affil[1]{USS Enterprise}
+\affil[2]{Starfleet Medical}
+\affil[3]{USS Voyager}
+\sharedfirsttext{Shared first author}
+\correspondingtext{To whom correspondence should be addressed}
 
 \title{Insert document title}
 \maketitle
