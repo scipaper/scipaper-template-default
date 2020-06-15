@@ -2,17 +2,22 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage[hidelinks]{hyperref}
 \usepackage{xr}
 \externaldocument{main.tex}
 
 \usepackage[backend=biber]{biblatex}
 \addbibresource{literature.bib}
 
+\newcommand{\image}[1]{\centering\includegraphics[width=\textwidth]{#1}}
+\let\plainurl\url
+\renewcommand{\url}[1]{\protect\plainurl{#1}}
+
 \begin{document}
 
 \title{Insert document title}
 \maketitle
-
+\parencite{Mesirov2010}
 \printbibliography
 \end{document}

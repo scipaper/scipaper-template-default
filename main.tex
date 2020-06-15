@@ -2,8 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{hyperref}
 \usepackage{authblk}
+\usepackage[hidelinks]{hyperref}
 \usepackage{xr}
 \externaldocument{supplement.tex}
 
@@ -14,6 +14,9 @@
 \newcommand{\sharedfirsttext}[1]{\affil[\sharedfirst]{#1}}
 \newcommand{\corresponding}{*}
 \newcommand{\correspondingtext}[1]{\affil[\corresponding]{#1}}
+\newcommand{\image}[1]{\centering\includegraphics[width=\textwidth]{#1}}
+\let\plainurl\url
+\renewcommand{\url}[1]{\protect\plainurl{#1}}
 
 \begin{document}
 
